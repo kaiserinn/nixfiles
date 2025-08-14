@@ -1,0 +1,29 @@
+layout {
+    tab name="neovim" focus=true hide_floating_panes=true {
+        pane command="/usr/bin/nvim" {
+            start_suspended false
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+        floating_panes {
+            pane command="/usr/bin/jjui" {
+                start_suspended true
+                height 18
+                width 79
+                x 8
+                y 0
+            }
+        }
+    }
+    tab name="runner" hide_floating_panes=true {
+        pane split_direction="vertical" {
+            pane size="50%"
+            pane size="50%"
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+    }
+}
+
