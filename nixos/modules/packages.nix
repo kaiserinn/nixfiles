@@ -12,8 +12,10 @@
     blueman
     unzip
     zip
+    unrar
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
+    home-manager
   ];
 
   fonts.packages = with pkgs; [

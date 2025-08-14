@@ -24,7 +24,7 @@
   boot.kernelParams = ["acpi_backlight=native"];
 
   fileSystems."/mnt/windows" = {
-    device = "/dev/nvme0n1p1";
+    device = "/dev/nvme0n1p2";
     fsType = "ntfs";
     options = ["nofail"];
   };
