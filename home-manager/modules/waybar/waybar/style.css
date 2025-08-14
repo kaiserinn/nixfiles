@@ -1,0 +1,89 @@
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd", monospace;
+
+    font-size: 12px;
+
+    min-height: 0;
+
+    color: rgb(205, 214, 244);
+}
+
+window#waybar {
+    background-color: rgba(30, 30, 46, 1);
+}
+
+#workspaces button {
+    color: rgb(205, 214, 244);
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+}
+
+#workspaces button.active {
+    background-color: rgb(49, 50, 68);
+    border-bottom: 2px solid rgb(203, 166, 247);
+}
+
+#workspaces button:hover {
+    background: inherit;
+    background-color: rgb(49, 50, 68);
+    box-shadow: inherit;
+    text-shadow: inherit;
+    transition: none;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#mode,
+#idle_inhibitor,
+#mpd {
+    padding: 0 8px 0 0;
+    margin: 0 8px; 
+}
+
+#tray {
+    margin: 0 8px
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#battery.charging {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

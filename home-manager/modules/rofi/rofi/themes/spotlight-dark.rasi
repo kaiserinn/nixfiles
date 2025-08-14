@@ -1,0 +1,122 @@
+/*******************************************************************************
+ * MACOS SPOTLIGHT LIKE DARK THEME FOR ROFI 
+ * User                 : LR-Tech               
+ * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
+ *******************************************************************************/
+
+* {
+    font:   "SF Pro Text 12";
+
+    bg0: #1e1e2e;
+    bg1: #313244;
+    bg2: #494d64;
+
+    fg0: #cdd6f4;
+    fg1: #ffffff;
+    fg2: #45475a;
+
+    bg0-default:    #242424E6;
+    bg1-default:    #7E7E7E80;
+    bg2-default:    #0860f2E6;
+
+    fg0-default:    #DEDEDE;
+    fg1-default:    #FFFFFF;
+    fg2-default:    #DEDEDE80;
+
+
+    background-color:   @bg0;
+    text-color:         @fg0;
+
+    margin:     0;
+    padding:    0;
+    spacing:    0;
+}
+
+window {
+    background-color:   @bg0;
+
+    location:       center;
+    width:          540;
+    border-radius:  8;
+    padding: 8px;
+    border-color: @fg2;
+    border:         1px;
+}
+
+inputbar {
+    font:       "SF Pro Display 20";
+    padding:    4px 4px 8px 4px;
+    border:     0 0 1px 0;
+    border-color: #6c7086;
+    spacing:    8px;
+    children:   [ icon-search, entry ];
+}
+
+icon-search {
+    expand:     false;
+    filename:   "search-icon";
+    size: 2em;
+}
+
+icon-search, entry, element-icon, element-text, prompt {
+    vertical-align: 0.5;
+}
+
+entry {
+    font:   inherit;
+    padding: 0 8px;
+
+    placeholder         : "Search for anything";
+    placeholder-color   : @fg2;
+}
+
+message {
+    border:             2px 0 0;
+    border-color:       @bg1;
+    background-color:   @bg1;
+}
+
+textbox {
+    padding:    8px 24px;
+}
+
+listview {
+    lines:      6;
+    columns:    1;
+
+    fixed-height:   false;
+    border-color:   #6c7086;
+    padding: 8px 0 0 0;
+    require-input: false;
+}
+
+element {
+    padding:            6px 16px;
+    margin:             2px 0px;
+    spacing:            8px;
+    background-color:   @bg0;
+    border-radius:  4;
+}
+
+element normal active {
+    text-color: @bg2;
+}
+
+element alternate active {
+    text-color: @bg2;
+}
+
+element selected normal, element selected active {
+    background-color:   @bg2;
+    text-color:         @fg1;
+}
+
+element-icon {
+    size:   1.5em;
+    background-color: transparent;
+}
+
+element-text selected {
+    text-color: inherit;
+    background-color: transparent;
+}

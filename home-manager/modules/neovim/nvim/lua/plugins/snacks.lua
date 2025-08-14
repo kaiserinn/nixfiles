@@ -1,0 +1,70 @@
+return {}
+-- return {
+-- 	"folke/snacks.nvim",
+-- 	priority = 1000,
+-- 	enabled = false,
+-- 	lazy = false,
+-- 	---@type snacks.Config
+-- 	opts = {
+-- 		-- your configuration comes here
+-- 		-- or leave it empty to use the default settings
+-- 		-- refer to the configuration section below
+-- 		bigfile = { enabled = false },
+-- 		explorer = { enabled = false },
+-- 		indent = { enabled = false },
+-- 		input = { enabled = true },
+-- 		picker = { enabled = false },
+-- 		notifier = { enabled = false },
+-- 		quickfile = { enabled = false },
+-- 		scope = { enabled = false },
+-- 		scroll = {
+-- 			enabled = false,
+-- 			animate = {
+-- 				duration = { step = 50, total = 50 },
+-- 			},
+-- 		},
+-- 		statuscolumn = { enabled = false },
+-- 		words = { enabled = false },
+-- 		lazygit = { enabled = false },
+-- 		dashboard = {
+-- 			enabled = true,
+-- 			preset = {
+-- 				-- header = "Cooking time.",
+-- -- 				header = [[
+-- -- ⣿⣿⣿⡷⠊⡢⡹⣦⡑⢂⢕⢂⢕⢂⢕⢂⠕⠔⠌⠝⠛⠶⠶⢶⣦⣄⢂⢕⢂⢕
+-- -- ⣿⣿⠏⣠⣾⣦⡐⢌⢿⣷⣦⣅⡑⠕⠡⠐⢿⠿⣛⠟⠛⠛⠛⠛⠡⢷⡈⢂⢕⢂
+-- -- ⠟⣡⣾⣿⣿⣿⣿⣦⣑⠝⢿⣿⣿⣿⣿⣿⡵⢁⣤⣶⣶⣿⢿⢿⢿⡟⢻⣤⢑⢂
+-- -- ⣾⣿⣿⡿⢟⣛⣻⣿⣿⣿⣦⣬⣙⣻⣿⣿⣷⣿⣿⢟⢝⢕⢕⢕⢕⢽⣿⣿⣷⣔
+-- -- ⣿⣿⠵⠚⠉⢀⣀⣀⣈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣗⢕⢕⢕⢕⢕⢕⣽⣿⣿⣿⣿
+-- -- ⢷⣂⣠⣴⣾⡿⡿⡻⡻⣿⣿⣴⣿⣿⣿⣿⣿⣿⣷⣵⣵⣵⣷⣿⣿⣿⣿⣿⣿⡿
+-- -- ⢌⠻⣿⡿⡫⡪⡪⡪⡪⣺⣿⣿⣿⣿⣿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃
+-- -- ⠣⡁⠹⡪⡪⡪⡪⣪⣾⣿⣿⣿⣿⠋⠐⢉⢍⢄⢌⠻⣿⣿⣿⣿⣿⣿⣿⣿⠏⠈
+-- -- ⡣⡘⢄⠙⣾⣾⣾⣿⣿⣿⣿⣿⣿⡀⢐⢕⢕⢕⢕⢕⡘⣿⣿⣿⣿⣿⣿⠏⠠⠈
+-- -- ⠌⢊⢂⢣⠹⣿⣿⣿⣿⣿⣿⣿⣿⣧⢐⢕⢕⢕⢕⢕⢅⣿⣿⣿⣿⡿⢋⢜⠠⠈
+-- --           ]],
+-- 				keys = {
+-- 					{ icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+-- 					{ icon = " ", key = "s", desc = "Restore Session", section = "session" },
+-- 					{
+-- 						icon = " ",
+-- 						key = "c",
+-- 						desc = "Config",
+-- 						action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
+-- 					},
+-- 					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
+-- 				},
+-- 			},
+-- 			sections = {
+-- 				{ section = "header" },
+-- 				{ section = "keys", gap = 0, padding = 1 },
+-- 				-- { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+-- 				{ icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+-- 				{ section = "startup" },
+-- 			},
+-- 		},
+-- 	},
+-- 	keys = {
+--     -- stylua: ignore
+-- 		{ "<leader>lg", function() require("snacks").lazygit.open() end, desc = "Comment: toggle current line" },
+-- 	},
+-- }
