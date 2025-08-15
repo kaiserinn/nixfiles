@@ -23,23 +23,23 @@
     system = "x86_64-linux";
     user = "azhar";
     host = "station48";
+    pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
       inherit system;
       modules = [
         ./nixos/configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.${user} = ./home-manager/home.nix;
-            extraSpecialArgs = {
-              inherit inputs;
-            };
-          };
-        }
       ];
+    };
+
+    homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      modules = [
+        ./home-manager/home.nix
+      ];
+      extraSpecialArgs = {
+        inherit inputs;
+      };
     };
   };
 }
