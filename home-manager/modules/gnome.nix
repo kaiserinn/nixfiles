@@ -1,10 +1,15 @@
-{
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    gnome-tweaks
+  ];
+
   dconf.settings = {
+    # "/org/gnome/desktop/wm/preferences/focus-mode" = "mouse";
     "org/gnome/shell" = {
       disable-user-extensions = false;
 
       enabled-extensions = [
-        "pop-shell@system76.com"
+        "paperwm@paperwm.github.com"
       ];
     };
   };

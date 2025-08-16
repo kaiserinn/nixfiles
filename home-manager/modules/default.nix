@@ -14,6 +14,6 @@
     ./jujutsu.nix
     ./cursor.nix
     ./stylix.nix
-    ./gnome.nix
+    # ./gnome.nix
   ];
 }

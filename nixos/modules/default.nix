@@ -4,6 +4,6 @@
     ./packages.nix
     ./ssh.nix
     ./services.nix
-    ./gnome.nix
+    # ./gnome.nix
   ];
 }
