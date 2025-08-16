@@ -10,7 +10,7 @@
   };
   environment.systemPackages = with pkgs; [
     gnome-console
-    gnomeExtensions.pop-shell
+    gnomeExtensions.paperwm
   ];
   environment.gnome.excludePackages = with pkgs; [gnome-tour gnome-user-docs];
 }
