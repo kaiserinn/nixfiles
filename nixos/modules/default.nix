@@ -5,5 +5,6 @@
     ./ssh.nix
     ./services.nix
     ./tlp.nix
+    # ./gnome.nix
   ];
 }

@@ -2,9 +2,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    cargo
     libnotify
-    wget
     brightnessctl
     pavucontrol
     networkmanagerapplet
