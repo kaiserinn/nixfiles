@@ -50,6 +50,8 @@
     btop
     nh
     vlc
+    satty
+    wget
 
     inputs.kintsugi.packages.${pkgs.system}.default
 
@@ -59,5 +61,6 @@
     mycli
     cargo
     rustc
+    go
   ];
 }
