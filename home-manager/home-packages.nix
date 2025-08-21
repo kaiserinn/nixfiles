@@ -62,5 +62,7 @@
     cargo
     rustc
     go
+    php
+    php84Packages.composer
   ];
 }
