@@ -64,5 +64,6 @@
     go
     php
     php84Packages.composer
+    nodejs_24
   ];
 }
