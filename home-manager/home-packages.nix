@@ -62,8 +62,21 @@
     cargo
     rustc
     go
-    php
-    php84Packages.composer
     nodejs_24
+
+    (pkgs.php.buildEnv {
+      extensions = {
+        enabled,
+        all,
+      }:
+        enabled
+        ++ (with all; [
+          xdebug
+        ]);
+      extraConfig = ''
+        xdebug.mode=debug,coverage
+      '';
+    })
+    php84Packages.composer
   ];
 }
