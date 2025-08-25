@@ -23,7 +23,6 @@
     # '')
     git
     gcc
-    firefox
     kitty
     jjui
     yadm
@@ -52,6 +51,7 @@
     vlc
     satty
     wget
+    obs-studio
 
     inputs.kintsugi.packages.${pkgs.system}.default
 
@@ -63,6 +63,7 @@
     rustc
     go
     nodejs_24
+    dioxus-cli
 
     (pkgs.php.buildEnv {
       extensions = {

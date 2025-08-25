@@ -2,6 +2,7 @@
   imports = [
     ./terminal
     ./neovim
+    ./helix
     ./hypr
     ./kitty
     ./dunst
