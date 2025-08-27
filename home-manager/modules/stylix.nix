@@ -19,6 +19,7 @@
       dunst.enable = false;
       starship.enable = false;
       waybar.enable = false;
+      zen-browser.enable = false;
     };
   };
 }

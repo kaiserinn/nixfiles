@@ -1,8 +1,9 @@
-{...}: {
+{
   imports = [
     ./home-packages.nix
     ./modules
   ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "azhar";
@@ -52,7 +53,7 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
-    BROWSER = "flatpak run --branch=stable --arch=x86_64 --command=launch-script.sh --file-forwarding app.zen_browser.zen @@u %u @@";
+    BROWSER = "zen";
   };
 
   # Let Home Manager install and manage itself.

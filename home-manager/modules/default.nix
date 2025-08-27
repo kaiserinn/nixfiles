@@ -15,6 +15,7 @@
     ./jujutsu.nix
     ./cursor.nix
     ./stylix.nix
+    ./zen-browser.nix
     # ./gnome.nix
   ];
 }

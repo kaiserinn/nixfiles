@@ -51,7 +51,6 @@
     variant = "";
   };
 
-  services.flatpak.enable = true;
   services.cloudflare-warp.enable = true;
   services.displayManager.gdm.enable = true;
 
