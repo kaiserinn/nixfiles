@@ -48,12 +48,12 @@ return {
 			})
 		end,
 		keys = {
-			{ "gcc", mode = "n", desc = "Comment: toggle current line" },
-			{ "gc", mode = { "n", "o" }, desc = "Comment: toggle linewise" },
-			{ "gc", mode = "x", desc = "Comment: toggle linewise (visual)" },
-			{ "gbc", mode = "n", desc = "Comment: toggle current block" },
-			{ "gb", mode = { "n", "o" }, desc = "Comment: toggle blockwise" },
-			{ "gb", mode = "x", desc = "Comment: toggle blockwise (visual)" },
+			{ "gcc", mode = "n",          desc = "Comment: toggle current line" },
+			{ "gc",  mode = { "n", "o" }, desc = "Comment: toggle linewise" },
+			{ "gc",  mode = "x",          desc = "Comment: toggle linewise (visual)" },
+			{ "gbc", mode = "n",          desc = "Comment: toggle current block" },
+			{ "gb",  mode = { "n", "o" }, desc = "Comment: toggle blockwise" },
+			{ "gb",  mode = "x",          desc = "Comment: toggle blockwise (visual)" },
 		},
 	},
 
@@ -114,11 +114,11 @@ return {
 	{
 		"folke/flash.nvim",
 		opts = {},
-    -- stylua: ignore
+		-- stylua: ignore
 		keys = {
-			{ "s", mode = { "n", "x" }, function() require("flash").jump() end, desc = "Flash: Flash jump" },
-			{ "r", mode = "o", function() require("flash").remote() end, desc = "Flash: Remote Flash" },
-			{ "<C-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Flash: Toggle Flash Search" },
+			{ "s",     mode = { "n", "x" }, function() require("flash").jump() end,   desc = "Flash: Flash jump" },
+			{ "r",     mode = "o",          function() require("flash").remote() end, desc = "Flash: Remote Flash" },
+			{ "<C-s>", mode = { "c" },      function() require("flash").toggle() end, desc = "Flash: Toggle Flash Search" },
 		},
 	},
 
@@ -134,9 +134,9 @@ return {
 		"nvim-treesitter/nvim-treesitter-context",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		opts = {
-			enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+			enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
 			multiwindow = false, -- Enable multiwindow support.
-			max_lines = 10, -- How many lines the window should span. Values <= 0 mean no limit.
+			max_lines = 10,  -- How many lines the window should span. Values <= 0 mean no limit.
 			min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
 			line_numbers = true,
 			multiline_threshold = 20, -- Maximum number of lines to show for a single context
@@ -199,10 +199,21 @@ return {
 		end,
 	},
 
-{
-  'mrcjkb/rustaceanvim',
-  version = '^6', -- Recommended
-  lazy = false, -- This plugin is already lazy
-}
-
+	{
+		'nvim-flutter/flutter-tools.nvim',
+		lazy = false,
+		dependencies = {
+			'nvim-lua/plenary.nvim',
+		},
+		opts = {
+			closing_tags = {
+				highlight = "ErrorMsg", -- highlight for the closing tag
+				prefix = ">", -- character to use for close tag e.g. > Widget
+				priority = 10, -- priority of virtual text in current line
+				-- consider to configure this when there is a possibility of multiple virtual text items in one line
+				-- see `priority` option in |:help nvim_buf_set_extmark| for more info
+				enabled = false -- set to false to disable
+			},
+		},
+	},
 }
