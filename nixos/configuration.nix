@@ -7,11 +7,6 @@
     ./modules
   ];
 
-  environment.variables = {
-    LIBVA_DRIVER_NAME = "nvidia";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-  };
-
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Bootloader.
@@ -62,6 +57,12 @@
     isNormalUser = true;
     description = "Azhar Rizqullah";
     extraGroups = ["networkmanager" "wheel"];
+  };
+
+  services = {
+    gnome.gnome-keyring = {
+      enable = true;
+    };
   };
 
   hardware.bluetooth.enable = true;

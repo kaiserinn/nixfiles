@@ -23,12 +23,20 @@ return { -- Fuzzy Finder (files, lsp, etc)
 		{ "nvim-tree/nvim-web-devicons",            enabled = vim.g.have_nerd_font },
 	},
 	config = function()
+		local open_with_trouble = require("trouble.sources.telescope").open
+
 		-- [[ Configure Telescope ]]
 		-- See `:help telescope` and `:help telescope.setup()`
 		require("telescope").setup({
 			extensions = {
 				["ui-select"] = {
 					require("telescope.themes").get_dropdown(),
+				},
+			},
+			defaults = {
+				mappings = {
+					i = { ["<c-t>"] = open_with_trouble },
+					n = { ["<c-t>"] = open_with_trouble },
 				},
 			},
 		})

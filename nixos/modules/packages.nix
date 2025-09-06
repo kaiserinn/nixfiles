@@ -13,6 +13,7 @@
     unrar
     xdg-desktop-portal-gtk
     home-manager
+    mesa-demos
   ];
 
   fonts.packages = with pkgs; [

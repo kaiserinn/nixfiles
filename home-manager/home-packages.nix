@@ -52,6 +52,7 @@
     satty
     wget
     obs-studio
+    scrcpy
 
     inputs.kintsugi.packages.${pkgs.system}.default
 
@@ -63,7 +64,7 @@
     rustc
     go
     nodejs_24
-    dioxus-cli
+    devenv
 
     (pkgs.php.buildEnv {
       extensions = {
