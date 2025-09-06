@@ -37,6 +37,9 @@ map("n", "<leader>w", "<CMD>tabclose<CR>", "Close current tab")
 map("n", "<A-J>", ":m .+1<CR>==", "Move line down.")
 map("n", "<A-K>", ":m .-2<CR>==", "Move line up.")
 
+vim.keymap.set("n", "<A-J>", ":m .+1<CR>==", { desc = "Move line down." })
+vim.keymap.set("n", "<A-K>", ":m .-2<CR>==", { desc = "Move line down." })
+
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -76,6 +79,11 @@ map("v", '<C-k>', '5k', 'Move 5 lines up')
 -- Move text up and down
 map("v", "<A-J>", ":m '>+1<CR>gv=gv", "Move line down.")
 map("v", "<A-K>", ":m '<-2<CR>gv=gv", "Move line up.")
+
+vim.keymap.set("n", "<A-J>", ":m '>+1<CR>gv=gv", { desc = "Move line down." })
+vim.keymap.set("n", "<A-K>", ":m '<-2<CR>gv=gv", { desc = "Move line down." })
+
+
 map("v", "p", '"_dP', "Paste the yanked text, replacing the selected text.")
 
 -- Visual Block --

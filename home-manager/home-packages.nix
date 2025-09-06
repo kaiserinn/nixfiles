@@ -53,6 +53,7 @@
     wget
     obs-studio
     scrcpy
+    obsidian
 
     inputs.kintsugi.packages.${pkgs.system}.default
 
