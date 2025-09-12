@@ -1,4 +1,4 @@
-format = """$username[❯](#02D0A9) $directory$git_branch$nix_shell
+format = """$username$hostname$directory$git_branch$nix_shell
 $character"""
 
 add_newline = false
@@ -9,17 +9,24 @@ error_symbol = "[❯](red)"
 
 [directory]
 fish_style_pwd_dir_length = 1
-style = '#02D0A9'
+# style = '#02D0A9'
+style = '#9ccfd8'
 
 [git_branch]
 format = "*[$branch(:$remote_branch)]($style) "
 style = "#606060"
 
 [username]
-format = "[$user]($style) "
+format = "[$user](#3e8fb0) "
 show_always = true
-style_user = '#606060'
+# style_user = '#606060'
 
 [nix_shell]
 format = '[\($name\)]($style) '
 style = '#606060'
+
+[hostname]
+format = '@[$hostname](#9ccfd8) '
+disabled = true
+ssh_only = false
+
