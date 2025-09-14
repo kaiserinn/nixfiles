@@ -39,7 +39,7 @@
     # desktop environment
     waybar
     dunst
-    rofi-wayland
+    rofi
     hyprpaper
     grim
     slurp
