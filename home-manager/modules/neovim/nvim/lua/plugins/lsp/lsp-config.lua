@@ -11,17 +11,17 @@ return {
 			gopls = {},
 			pyright = {},
 			zls = {},
-			-- rust_analyzer = {
-			-- 	settings = {
-			-- 		["rust-analyzer"] = {
-			-- 			check = {
-			-- 				command = "clippy",
-			-- 			},
-			-- 		},
-			-- 	},
-			-- },
+			dartls = {},
+			rust_analyzer = {
+				settings = {
+					["rust-analyzer"] = {
+						check = {
+							command = "clippy",
+						},
+					},
+				},
+			},
 			svelte = {},
-			-- nil_ls = {},
 			nixd = {
 				nixpkgs = {
 					expr = "import <nixpkgs> { }",

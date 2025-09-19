@@ -7,6 +7,7 @@
     ./tlp.nix
     ./docker.nix
     # ./disable-nvidia.nix
+    ./nix.nix
     # ./gnome.nix
   ];
 }
