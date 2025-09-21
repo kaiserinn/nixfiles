@@ -53,6 +53,7 @@
     obsidian
     anki
     youtube-music
+    kdePackages.okular
 
     # misc
     git
