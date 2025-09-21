@@ -48,6 +48,7 @@
     kitty
     discord
     vlc
+    mpv
     obs-studio
     obsidian
     anki
