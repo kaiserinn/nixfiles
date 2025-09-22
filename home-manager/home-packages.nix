@@ -32,6 +32,8 @@
     zellij
     yadm
     yazi
+    ffmpeg
+    xh
 
     # desktop environment
     waybar
