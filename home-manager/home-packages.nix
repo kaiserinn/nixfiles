@@ -34,6 +34,7 @@
     yazi
     ffmpeg
     xh
+    typst
 
     # desktop environment
     waybar

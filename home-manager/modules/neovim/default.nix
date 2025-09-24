@@ -25,6 +25,7 @@
       emmet-language-server
       gopls
       rust-analyzer
+      tinymist
 
       # Formatters/linters
       alejandra
@@ -32,6 +33,9 @@
       eslint_d
       rustfmt
       clippy
+
+      # For typst-preview
+      websocat
     ];
   };
 }

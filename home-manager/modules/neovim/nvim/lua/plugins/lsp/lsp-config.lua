@@ -12,6 +12,7 @@ return {
 			pyright = {},
 			zls = {},
 			dartls = {},
+			tinymist = {},
 			rust_analyzer = {
 				settings = {
 					["rust-analyzer"] = {
