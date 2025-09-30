@@ -10,6 +10,9 @@ return {
 			intelephense = {},
 			gopls = {},
 			pyright = {},
+			-- ty = {
+			-- 	cmd = { "uv", "run", "ty", "server" },
+			-- },
 			zls = {},
 			dartls = {},
 			tinymist = {},

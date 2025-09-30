@@ -26,6 +26,8 @@
       gopls
       rust-analyzer
       tinymist
+      ty
+      pyright
 
       # Formatters/linters
       alejandra

@@ -57,6 +57,7 @@
     anki
     youtube-music
     kdePackages.okular
+    zed-editor
 
     # misc
     git
@@ -76,6 +77,8 @@
     go
     nodejs_24
     devenv
+    uv
+    python314
 
     (pkgs.php.buildEnv {
       extensions = {

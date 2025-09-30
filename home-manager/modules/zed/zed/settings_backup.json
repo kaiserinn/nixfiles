@@ -22,7 +22,8 @@
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
-    }
+    },
+    "version": "2"
   },
   "vim_mode": true,
   "ui_font_size": 14,
@@ -33,6 +34,7 @@
     "dark": "Rosé Pine"
   },
   "unnecessary_code_fade": 0.5,
+  "enable_preview_from_file_finder": true,
   "format_on_save": "off",
   "tab_size": 4,
   "languages": {
