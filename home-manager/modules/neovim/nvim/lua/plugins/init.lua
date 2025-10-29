@@ -219,7 +219,14 @@ return {
 				['websocat'] = 'websocat',
 			}
 		},
-	}
+	},
+
+	{
+		"j-hui/fidget.nvim",
+		opts = {
+			-- options
+		},
+	},
 
 	-- {
 	-- 	'nvim-flutter/flutter-tools.nvim',
