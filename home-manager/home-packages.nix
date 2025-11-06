@@ -77,8 +77,7 @@
     go
     nodejs_24
     devenv
-    uv
-    python314
+    ngrok
 
     (pkgs.php.buildEnv {
       extensions = {
