@@ -58,6 +58,9 @@
     youtube-music
     kdePackages.okular
     zed-editor
+    vesktop
+    kdePackages.kdenlive
+    antigravity
 
     # misc
     git
