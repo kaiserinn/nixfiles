@@ -28,6 +28,7 @@
       tinymist
       ty
       pyright
+      clang-tools
 
       # Formatters/linters
       alejandra
