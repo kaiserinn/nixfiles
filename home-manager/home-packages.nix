@@ -59,20 +59,22 @@
     # zed-editor
     antigravity
     zotero
+    readest
+    codeblocks
 
     # misc
     git
-    gcc
+    # gcc
     jq
     wget
     scrcpy
+    man-pages
 
     inputs.kintsugi.packages.${pkgs.system}.default
 
     # dev
     bun
-    zig
-    mycli
+    # mycli broken
     cargo
     rustc
     go

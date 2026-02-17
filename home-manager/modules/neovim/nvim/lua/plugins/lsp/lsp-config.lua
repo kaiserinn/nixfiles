@@ -11,10 +11,13 @@ return {
 			intelephense = {},
 			gopls = {},
 			pyright = {},
-			-- ty = {
-			-- 	cmd = { "uv", "run", "ty", "server" },
-			-- },
-			zls = {},
+			zls = {
+				settings = {
+					zls = {
+						build_on_save_args = {"-fincremental"}
+					}
+				},
+			},
 			dartls = {},
 			tinymist = {},
 			rust_analyzer = {

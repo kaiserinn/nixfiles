@@ -14,6 +14,8 @@
     xdg-desktop-portal-gtk
     home-manager
     mesa-demos
+
+    gcc
   ];
 
   fonts.packages = with pkgs; [
