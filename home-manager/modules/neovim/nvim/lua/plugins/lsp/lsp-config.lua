@@ -3,6 +3,7 @@ return {
 	"neovim/nvim-lspconfig",
 	opts = {
 		servers = {
+			clangd = {},
 			emmet_language_server = {},
 			cssls = {},
 			tailwindcss = {},

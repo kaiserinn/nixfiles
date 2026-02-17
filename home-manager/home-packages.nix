@@ -55,12 +55,10 @@
     obs-studio
     obsidian
     anki
-    youtube-music
     kdePackages.okular
-    zed-editor
-    vesktop
-    kdePackages.kdenlive
+    # zed-editor
     antigravity
+    zotero
 
     # misc
     git
