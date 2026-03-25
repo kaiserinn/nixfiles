@@ -14,7 +14,7 @@
 
       # Language servers
       nixd
-      nixfmt-rfc-style
+      nixfmt
       lua-language-server
       zls
       phpactor
@@ -28,7 +28,8 @@
       tinymist
       ty
       pyright
-      clang-tools
+      svelte-language-server
+      # clang-tools
 
       # Formatters/linters
       alejandra

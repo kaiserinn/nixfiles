@@ -47,7 +47,8 @@
   };
 
   services.cloudflare-warp.enable = true;
-  services.displayManager.gdm.enable = true;
+  # services.displayManager.gdm.enable = true;
+  services.displayManager.ly.enable = true;
 
   programs.hyprland.enable = true;
   programs.fish.enable = true;
