@@ -11,6 +11,8 @@
       # Tools
       nodejs_24
       cargo
+      # lua55Packages.tree-sitter-cli
+      tree-sitter
 
       # Language servers
       nixd
@@ -29,7 +31,7 @@
       ty
       pyright
       svelte-language-server
-      # clang-tools
+      clang-tools
 
       # Formatters/linters
       alejandra

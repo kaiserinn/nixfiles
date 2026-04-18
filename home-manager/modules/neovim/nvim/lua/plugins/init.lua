@@ -12,10 +12,9 @@ return {
 		event = "BufReadPre",
 	},
 
-	-- Discord rich presence
 	{
-		"andweeb/presence.nvim",
-		event = "BufRead",
+		"vyfor/cord.nvim",
+		event = "BufReadPre",
 	},
 
 	{

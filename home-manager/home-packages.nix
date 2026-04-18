@@ -55,12 +55,13 @@
     obs-studio
     obsidian
     anki
-    kdePackages.okular
-    # zed-editor
     antigravity
     zotero
     readest
     codeblocks
+    opencode
+    gopeed
+    gemini-cli-bin
 
     # misc
     git
@@ -69,12 +70,15 @@
     wget
     scrcpy
     man-pages
+    cacert
 
     inputs.kintsugi.packages.${pkgs.system}.default
 
+    inputs.forgecode.packages.${pkgs.system}.default
+
     # dev
     bun
-    # mycli broken
+    mycli
     cargo
     rustc
     go
@@ -87,10 +91,7 @@
         enabled,
         all,
       }:
-        enabled
-        ++ (with all; [
-          xdebug
-        ]);
+        enabled ++ [all.xdebug];
       extraConfig = ''
         xdebug.mode=debug,coverage
       '';

@@ -1,11 +1,18 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ./modules
+    inputs.hyprland.nixosModules.default
   ];
+
+  programs.nix-ld.enable = true;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
@@ -16,7 +23,21 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  boot.kernelParams = ["acpi_backlight=native"];
+  # 0: Emergency
+  # 1: Alert
+  # 2: Critical
+  # 3: Error
+  # 4: Warning
+  # 5: Notice
+  # 6: Info
+  # 7: Debug
+
+  boot.kernelParams = [
+    "acpi_backlight=native"
+    "quiet" # disables the famous Linux "wall of text"
+    "loglevel=3" # apply the level 3 restriction
+  ];
+  boot.consoleLogLevel = 3;
 
   fileSystems."/mnt/windows" = {
     device = "/dev/nvme0n1p2";
@@ -50,7 +71,6 @@
   # services.displayManager.gdm.enable = true;
   services.displayManager.ly.enable = true;
 
-  programs.hyprland.enable = true;
   programs.fish.enable = true;
 
   users.users.azhar = {

@@ -20,6 +20,16 @@
       # to have it up-to-date or simply don't specify the nixpkgs input
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    forgecode = {
+      url = "github:tailcallhq/forgecode";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -34,6 +44,7 @@
   in {
     nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
       inherit system;
+      specialArgs = { inherit inputs; };
       modules = [
         ./nixos/configuration.nix
       ];
