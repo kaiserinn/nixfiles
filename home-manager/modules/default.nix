@@ -8,7 +8,6 @@
     ./rofi
     ./waybar
     ./yazi
-    ./zed
     ./zellij
     ./starship
     ./git.nix
