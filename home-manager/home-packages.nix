@@ -48,6 +48,7 @@
     cliphist
 
     # apps
+    chromium
     kitty
     discord
     vlc
@@ -71,6 +72,8 @@
     scrcpy
     man-pages
     cacert
+    android-tools
+    deskreen
 
     inputs.kintsugi.packages.${pkgs.system}.default
 

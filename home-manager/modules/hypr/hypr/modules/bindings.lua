@@ -3,7 +3,7 @@ local u = require("modules.utils")
 
 u.bindm_exec("T", g.term)
 u.bindm_exec("M", "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
-u.bindm_exec("E", "kitty -e" .. g.fileManager)
+u.bindm_exec("E", "kitty -e " .. g.fileManager)
 u.bind_exec("ALT + SPACE", "rofi -show drun -show-icons")
 u.bindm("Q", hl.dsp.window.close())
 u.bindm("Q", hl.dsp.window.close())
@@ -38,7 +38,7 @@ hl.bind(g.mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(g.mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 u.bindm("SHIFT + A", hl.dsp.workspace.move({ monitor = "l" }))
-u.bindm("SHIFT + D", hl.dsp.workspace.move({ monitor = "l" }))
+u.bindm("SHIFT + D", hl.dsp.workspace.move({ monitor = "r" }))
 
 -- Laptop multimedia keys for volume and LCD brightness
 local volumeUpCmd =
@@ -61,13 +61,15 @@ hl.bind(
 -- hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
 --     { locked = true, repeating = true })
 
+-- hl.bind("Alt_R", hl.dsp.exec_cmd("kitty"))
+
 hl.bind(
-    "Alt_R + Up",
+    "ALT + Up",
     hl.dsp.exec_cmd(volumeUpCmd),
     { locked = true, repeating = true }
 )
 hl.bind(
-    "Alt_R + Down",
+    "ALT + Down",
     hl.dsp.exec_cmd(volumeDownCmd),
     { locked = true, repeating = true }
 )
@@ -106,7 +108,7 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- Screenshot
-u.bindm_exec(
+u.bind_exec(
     "Print",
     "grim -o $(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name') - | wl-copy && notify-send \"Screenshot taken\""
 )

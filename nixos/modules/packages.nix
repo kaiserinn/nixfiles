@@ -25,5 +25,6 @@
     noto-fonts-color-emoji
     newcomputermodern
     iosevka
+    texlivePackages.stix2-otf
   ];
 }
