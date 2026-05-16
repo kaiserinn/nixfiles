@@ -15,6 +15,7 @@
     ./cursor.nix
     ./stylix.nix
     ./zen-browser.nix
+    ./walker.nix
     # ./obsidian.nix
   ];
 }

@@ -4,7 +4,8 @@ local u = require("modules.utils")
 u.bindm_exec("T", g.term)
 u.bindm_exec("M", "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 u.bindm_exec("E", "kitty -e " .. g.fileManager)
-u.bind_exec("ALT + SPACE", "rofi -show drun -show-icons")
+u.bind_exec("ALT + B", "rofi -show drun -show-icons")
+u.bind_exec("ALT + SPACE", "nc -U /run/user/1000/walker/walker.sock")
 u.bindm("Q", hl.dsp.window.close())
 u.bindm("Q", hl.dsp.window.close())
 u.bindm("F", hl.dsp.window.float({ action = "toggle" }))
@@ -61,12 +62,10 @@ hl.bind(
 -- hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
 --     { locked = true, repeating = true })
 
--- hl.bind("Alt_R", hl.dsp.exec_cmd("kitty"))
-
 hl.bind(
     "ALT + Up",
     hl.dsp.exec_cmd(volumeUpCmd),
-    { locked = true, repeating = true }
+    { locked = true, repeating = true, separate = true }
 )
 hl.bind(
     "ALT + Down",
@@ -76,29 +75,17 @@ hl.bind(
 
 local brightnessDevices = { "amdgpu_bl1", "amdgpu_bl2" }
 for _, device in ipairs(brightnessDevices) do
-    local brightnessUpCmd = "brightnessctl -d "
-        .. device .. " s +5% && notify-send -t 1000 -i brightness-high -r 9999 $(echo \"scale=5; $(brightnessctl -d "
-        .. device .. " g) / $(brightnessctl -d "
-        .. device .. " m) * 100 | awk '{print int($1)}'\" | bc)% -h int:value:$(echo \"scale=5; $(brightnessctl -d "
-        .. device .. " g) / $(brightnessctl -d "
-        .. device .. " m) * 100 | awk '{print int($1)}'\" | bc)"
-    local brightnessDownCmd = "brightnessctl -d "
-        .. device .. " s 5%- && notify-send -t 1000 -i brightness-low -r 9999 $(echo \"scale=5; $(brightnessctl -d "
-        .. device .. " g) / $(brightnessctl -d "
-        .. device .. " m) * 100 | awk '{print int($1)}'\" | bc)% -h int:value:$(echo \"scale=5; $(brightnessctl -d "
-        .. device .. " g) / $(brightnessctl -d "
-        .. device .. " m) * 100 | awk '{print int($1)}'\" | bc)"
+    local brightnessUpCmd = "brightnessctl -m -d " ..
+    device ..
+    " s +5% | awk -F, '{system(\"notify-send -t 1000 -i brightness-high -r 9999 \" $4 \" -h int:value:\" int($4))}'"
+    local brightnessDownCmd = "brightnessctl -m -d " ..
+    device ..
+    " s 5%- | awk -F, '{system(\"notify-send -t 1000 -i brightness-high -r 9999 \" $4 \" -h int:value:\" int($4))}'"
 
-    hl.bind(
-        "XF86MonBrightnessUp",
-        hl.dsp.exec_cmd(brightnessUpCmd),
-        { locked = true, repeating = true }
-    )
-    hl.bind(
-        "XF86MonBrightnessDown",
-        hl.dsp.exec_cmd(brightnessDownCmd),
-        { locked = true, repeating = true }
-    )
+    hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(brightnessUpCmd), { locked = true, repeating = true })
+    hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(brightnessDownCmd), { locked = true, repeating = true })
+    hl.bind("ALT + Right", hl.dsp.exec_cmd(brightnessUpCmd), { locked = true, repeating = true })
+    hl.bind("ALT + Left", hl.dsp.exec_cmd(brightnessDownCmd), { locked = true, repeating = true })
 end
 
 -- Requires playerctl
