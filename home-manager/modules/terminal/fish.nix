@@ -11,6 +11,7 @@
       cat = "bat";
       cd = "z";
       zz = "z -";
+      scratch = "nvim $(mktemp)";
     };
 
     functions = {

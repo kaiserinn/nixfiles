@@ -1,12 +1,12 @@
 {
-  inputs,
+  pkgs,
   config,
   ...
 }: let
   luarc = {
     workspace = {
       library = [
-        "${inputs.hyprland.packages.x86_64-linux.hyprland}/share/hypr/stubs"
+        "${pkgs.hyprland}/share/hypr/stubs"
       ];
     };
     diagnostics = {

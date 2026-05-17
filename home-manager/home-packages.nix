@@ -37,6 +37,7 @@
     ffmpeg
     xh
     typst
+    dua
 
     # desktop environment
     dunst
@@ -77,8 +78,6 @@
     osu-lazer-bin
 
     inputs.kintsugi.packages.${pkgs.system}.default
-
-    inputs.forgecode.packages.${pkgs.system}.default
 
     # dev
     bun

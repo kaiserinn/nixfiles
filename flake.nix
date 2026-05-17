@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "nixpkgs/nixos-26.05";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -21,16 +21,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    forgecode = {
-      url = "github:tailcallhq/forgecode";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     elephant.url = "github:abenz1267/elephant";
 
     walker = {
@@ -38,10 +28,15 @@
       inputs.elephant.follows = "elephant";
     };
 
-    waybar = {
-      url = "github:Alexays/Waybar";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # waybar = {
+    #   url = "github:Alexays/Waybar";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
+    # helium = {
+    #   url = "github:schembriaiden/helium-browser-nix-flake";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs = {
@@ -56,7 +51,7 @@
   in {
     nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
       modules = [
         ./nixos/configuration.nix
       ];

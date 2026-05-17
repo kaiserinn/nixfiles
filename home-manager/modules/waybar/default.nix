@@ -3,12 +3,12 @@
   inputs,
   ...
 }: let
-  system = pkgs.stdenv.hostPlatform.system;
-  waybar = inputs.waybar.packages.${system}.default;
+  # system = pkgs.stdenv.hostPlatform.system;
+  # waybar = inputs.waybar.packages.${system}.default;
 in {
   programs.waybar = {
     enable = true;
-    package = waybar;
+    # package = waybar;
   };
 
   home.file.".config/waybar" = {
