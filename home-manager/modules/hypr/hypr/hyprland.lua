@@ -4,7 +4,7 @@ require("modules.autostart")
 require("modules.look-and-feel")
 require("modules.input")
 require("modules.env")
-require("modules.windows")
+require("modules.rules")
 
 -- MISC
 hl.config({

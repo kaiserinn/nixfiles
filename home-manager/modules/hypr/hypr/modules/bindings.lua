@@ -9,6 +9,7 @@ u.bind_exec("ALT + SPACE", "nc -U /run/user/1000/walker/walker.sock")
 u.bindm("Q", hl.dsp.window.close())
 u.bindm("Q", hl.dsp.window.close())
 u.bindm("F", hl.dsp.window.float({ action = "toggle" }))
+u.bindm("U", hl.dsp.window.fullscreen())
 u.bindm("P", hl.dsp.window.pseudo())
 u.bindm("J", hl.dsp.layout("togglesplit")) -- dwindle only
 

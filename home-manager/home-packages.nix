@@ -18,6 +18,8 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
 
+    kdePackages.okular
+
     # cli tools
     jjui
     ripgrep
@@ -37,7 +39,6 @@
     typst
 
     # desktop environment
-    waybar
     dunst
     rofi
     hyprpaper
@@ -48,7 +49,6 @@
     cliphist
 
     # apps
-    chromium
     kitty
     discord
     vlc
@@ -74,6 +74,7 @@
     cacert
     android-tools
     deskreen
+    osu-lazer-bin
 
     inputs.kintsugi.packages.${pkgs.system}.default
 
