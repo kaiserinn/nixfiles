@@ -13,6 +13,30 @@ local suppressMaximizeRule = hl.window_rule({
 -- suppressMaximizeRule:set_enabled(false)
 
 hl.window_rule({
+    match = {
+        class = "zen-beta",
+        title = "Sign in - Google Accounts — Zen Browser",
+        initial_title = "Zen Browser"
+    },
+    float = true,
+    center = true,
+    size = {"(monitor_w*0.5)", "(monitor_h*0.5)"}
+})
+
+hl.window_rule({
+    match = { class = "Zotero", title = "Citation Dialog" },
+    float = true,
+    center = true,
+    size = {"(monitor_w*0.5)", "(monitor_h*0.5)"}
+})
+
+hl.window_rule({
+  match = { class = "Zotero", title = "^$" },
+  float = true,
+  center = true,
+})
+
+hl.window_rule({
     -- Fix some dragging issues with XWayland
     name     = "fix-xwayland-drags",
     match    = {

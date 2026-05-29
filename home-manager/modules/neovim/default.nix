@@ -1,12 +1,17 @@
-{pkgs, ...}: {
-  home.file.".config/nvim" = {
-    source = ./nvim;
-    recursive = true;
-  };
+{
+  pkgs,
+  config,
+  ...
+}: let
+  homeDir = config.home.homeDirectory;
+  nvim = "${homeDir}/.config/nix/home-manager/modules/neovim";
+in {
+  home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${nvim}/nvim";
 
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+    sideloadInitLua = true;
     extraPackages = with pkgs; [
       # Tools
       nodejs_24

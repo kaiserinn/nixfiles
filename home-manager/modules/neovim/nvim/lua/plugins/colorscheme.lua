@@ -68,6 +68,9 @@ return {
 				FlashLabel = { bg = "transparent", fg = "gold" },
 				FlashCurrent = { bg = "gold", fg = "text", blend = 30 },
 			},
+			enable = {
+				terminal = false,
+			},
 		},
 		config = function(_, opts)
 			require("rose-pine").setup(opts)

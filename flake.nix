@@ -37,6 +37,11 @@
       url = "github:abenz1267/walker";
       inputs.elephant.follows = "elephant";
     };
+
+    waybar = {
+      url = "github:Alexays/Waybar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
