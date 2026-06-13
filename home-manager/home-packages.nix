@@ -2,7 +2,9 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  system = pkgs.stdenv.hostPlatform.system;
+in {
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -54,7 +56,7 @@
     discord
     vlc
     mpv
-    obs-studio
+    # obs-studio
     obsidian
     anki
     antigravity
@@ -64,6 +66,7 @@
     opencode
     gopeed
     gemini-cli-bin
+    zed-editor
 
     # misc
     git
@@ -72,12 +75,10 @@
     wget
     scrcpy
     man-pages
-    cacert
-    android-tools
-    deskreen
-    osu-lazer-bin
+    prismlauncher
 
-    inputs.kintsugi.packages.${pkgs.system}.default
+    inputs.kintsugi.packages.${system}.default
+    inputs.helium.packages.${system}.default
 
     # dev
     bun

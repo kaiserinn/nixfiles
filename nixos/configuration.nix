@@ -4,6 +4,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   imports = [
@@ -21,6 +22,14 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+  ];
+  boot.extraModprobeConfig = ''
+    options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
+  '';
+  security.polkit.enable = true;
 
   # 0: Emergency
   # 1: Alert
@@ -67,8 +76,8 @@
   };
 
   services.cloudflare-warp.enable = true;
-  # services.displayManager.gdm.enable = true;
-  services.displayManager.ly.enable = true;
+  services.displayManager.gdm.enable = true;
+  # services.displayManager.ly.enable = true;
 
   programs.fish.enable = true;
 
@@ -105,7 +114,7 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-  networking.firewall.allowedTCPPorts = [ 3131 ];
+  networking.firewall.allowedTCPPorts = [3131];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

@@ -10,6 +10,6 @@
     ./hyprland.nix
     # ./disable-nvidia.nix
     ./nix.nix
-    # ./gnome.nix
+    ./gnome.nix
   ];
 }
