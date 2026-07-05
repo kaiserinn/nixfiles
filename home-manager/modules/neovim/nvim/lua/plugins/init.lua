@@ -14,7 +14,7 @@ return {
 
 	{
 		"vyfor/cord.nvim",
-		event = "BufReadPre",
+		opts = {},
 	},
 
 	{
@@ -113,12 +113,13 @@ return {
 	{
 		"folke/flash.nvim",
 		opts = {},
-		-- stylua: ignore
-		keys = {
-			{ "s",     mode = { "n", "x" }, function() require("flash").jump() end,   desc = "Flash: Flash jump" },
-			{ "r",     mode = "o",          function() require("flash").remote() end, desc = "Flash: Remote Flash" },
-			{ "<C-s>", mode = { "c" },      function() require("flash").toggle() end, desc = "Flash: Toggle Flash Search" },
-		},
+		event = "InsertEnter",
+		config = function()
+			vim.keymap.set({ "n", "x" }, "s", function() require("flash").jump() end, { desc = "Flash: Flash jump" })
+			vim.keymap.set("o", "r", function() require("flash").remote() end, { desc = "Flash: Remote flash" })
+			vim.keymap.set("c", "<C-s>", function() require("flash").toggle() end,
+				{ desc = "Flash: Toggle flash search" })
+		end
 	},
 
 	{

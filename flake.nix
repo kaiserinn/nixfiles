@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -33,10 +34,10 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
-    # helium = {
-    #   url = "github:schembriaiden/helium-browser-nix-flake";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    helium = {
+      url = "github:schembriaiden/helium-browser-nix-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -48,6 +49,7 @@
     user = "azhar";
     host = "station48";
     pkgs = nixpkgs.legacyPackages.${system};
+    unstable = inputs.nixpkgs-unstable.legacyPackages.${system};
   in {
     nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
       inherit system;
@@ -64,6 +66,7 @@
       ];
       extraSpecialArgs = {
         inherit inputs;
+        inherit unstable;
       };
     };
   };

@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  unstable,
   ...
 }: let
   homeDir = config.home.homeDirectory;
@@ -35,7 +36,7 @@ in {
       tinymist
       ty
       pyright
-      svelte-language-server
+      # unstable.svelte-language-server
       clang-tools
 
       # Formatters/linters
