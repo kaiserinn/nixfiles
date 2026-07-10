@@ -56,17 +56,15 @@ in {
     discord
     vlc
     mpv
-    # obs-studio
+    obs-studio
     obsidian
     anki
-    antigravity
     zotero
     readest
-    codeblocks
     opencode
     gopeed
     gemini-cli-bin
-    zed-editor
+    onlyoffice-desktopeditors
 
     # misc
     git

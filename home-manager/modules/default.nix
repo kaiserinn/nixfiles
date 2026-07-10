@@ -12,11 +12,10 @@
     ./starship
     ./git.nix
     ./jujutsu.nix
-    ./cursor.nix
+    # ./cursor.nix
     ./stylix.nix
     ./zen-browser.nix
     ./walker.nix
-    ./obs.nix
     # ./obsidian.nix
   ];
 }

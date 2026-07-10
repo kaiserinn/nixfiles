@@ -54,7 +54,8 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
-    BROWSER = "zen";
+    BROWSER = "zen-beta";
+    ELECTRON_OZONE_PLATFORM_HINT = "auto";
   };
 
   # Let Home Manager install and manage itself.
