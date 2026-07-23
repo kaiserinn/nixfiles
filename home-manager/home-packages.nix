@@ -36,10 +36,9 @@ in {
     zellij
     yadm
     yazi
-    ffmpeg
     xh
-    typst
     dua
+    bottom
 
     # desktop environment
     dunst
@@ -60,9 +59,8 @@ in {
     obsidian
     anki
     zotero
-    readest
     opencode
-    gopeed
+    # gopeed
     gemini-cli-bin
     onlyoffice-desktopeditors
 
@@ -73,7 +71,6 @@ in {
     wget
     scrcpy
     man-pages
-    prismlauncher
 
     inputs.kintsugi.packages.${system}.default
     inputs.helium.packages.${system}.default

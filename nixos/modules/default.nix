@@ -5,7 +5,7 @@
     ./ssh.nix
     ./services.nix
     ./tlp.nix
-    ./docker.nix
+    # ./docker.nix
     ./steam.nix
     ./hyprland.nix
     # ./disable-nvidia.nix
