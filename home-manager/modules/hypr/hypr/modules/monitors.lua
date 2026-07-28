@@ -3,9 +3,9 @@ local monitors = { "eDP-1", "eDP-2" }
 for _, monitor in ipairs(monitors) do
     hl.monitor({
         output   = monitor,
-        mode     = "preferred",
+        mode     = "1920x1080@90",
         position = "auto",
-        scale    = "1.25",
+        scale    = "1",
     })
 
     -- mirror

@@ -39,6 +39,7 @@ in {
     xh
     dua
     bottom
+    moor
 
     # desktop environment
     dunst
@@ -63,6 +64,7 @@ in {
     # gopeed
     gemini-cli-bin
     onlyoffice-desktopeditors
+    antigravity
 
     # misc
     git

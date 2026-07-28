@@ -5,10 +5,10 @@
   };
 
   # https://wiki.hypr.land/Nvidia/#environment-variables 
-  environment.variables = {
-    LIBVA_DRIVER_NAME = "nvidia";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-  };
+  # environment.variables = {
+  #   LIBVA_DRIVER_NAME = "nvidia";
+  #   __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+  # };
 
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
