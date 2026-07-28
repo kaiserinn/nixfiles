@@ -8,13 +8,16 @@ return {
 
 	-- Detect tabstop and shiftwidth automatically
 	{
-		"tpope/vim-sleuth",
-		event = "BufReadPre",
+		"tpope/vim-sleuth", event = "BufReadPre",
 	},
 
 	{
 		"vyfor/cord.nvim",
-		opts = {},
+		opts = {
+			idle = {
+				timeout = 1800000
+			}
+		},
 	},
 
 	{
