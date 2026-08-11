@@ -58,6 +58,8 @@
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
   };
 
+  home.sessionPath = [ "$HOME/.cargo/bin" ];
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

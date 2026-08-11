@@ -1,7 +1,7 @@
 {
   imports = [
-    # ./nvidia.nix
-    ./disable-nvidia.nix
+    ./nvidia.nix
+    # ./disable-nvidia.nix
     ./packages.nix
     ./ssh.nix
     ./services.nix

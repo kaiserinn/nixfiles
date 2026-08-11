@@ -20,7 +20,11 @@ in {
     #   echo "Hello, ${config.home.username}!"
     # '')
 
-    kdePackages.okular
+    libxkbcommon
+    wayland
+    vulkan-loader
+    clang
+    mold
 
     # cli tools
     jjui
@@ -62,9 +66,6 @@ in {
     zotero
     opencode
     # gopeed
-    gemini-cli-bin
-    onlyoffice-desktopeditors
-    antigravity
 
     # misc
     git
