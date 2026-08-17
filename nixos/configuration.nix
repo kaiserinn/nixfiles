@@ -84,7 +84,7 @@
     shell = pkgs.fish;
     isNormalUser = true;
     description = "Azhar Rizqullah";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "uinput"];
   };
 
   services = {
@@ -113,7 +113,7 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-  networking.firewall.allowedTCPPorts = [3131];
+  networking.firewall.allowedTCPPorts = [3131 1701];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -123,4 +123,12 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   # system.stateVersion = "25.05"; # Did you read the comment?
   system.stateVersion = "26.05"; # Did you read the comment?
+
+
+  users.groups.uinput = {};
+
+  # 3. Add the udev rule to give the group write access
+  services.udev.extraRules = ''
+    KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
+  '';
 }

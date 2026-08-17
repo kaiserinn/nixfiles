@@ -66,6 +66,8 @@ in {
     zotero
     opencode
     # gopeed
+    zed-editor
+    krita
 
     # misc
     git

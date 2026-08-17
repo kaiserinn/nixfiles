@@ -50,11 +50,37 @@
     host = "station48";
     pkgs = nixpkgs.legacyPackages.${system};
     unstable = inputs.nixpkgs-unstable.legacyPackages.${system};
+
+    cosmicUnstableOverlay = final: prev: {
+      inherit
+        (inputs.nixpkgs-unstable.legacyPackages.${system})
+        cosmic-applets
+        cosmic-app-library
+        cosmic-bg
+        cosmic-comp
+        cosmic-files
+        cosmic-greeter
+        cosmic-idle
+        cosmic-initial-setup
+        cosmic-launcher
+        cosmic-notifications
+        cosmic-osd
+        cosmic-panel
+        cosmic-session
+        cosmic-settings
+        cosmic-settings-daemon
+        cosmic-workspaces-epoch
+        xdg-desktop-portal-cosmic
+        ;
+    };
   in {
     nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = {inherit inputs;};
       modules = [
+        {
+          nixpkgs.overlays = [cosmicUnstableOverlay];
+        }
         ./nixos/configuration.nix
       ];
     };
@@ -62,6 +88,9 @@
     homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [
+        {
+          nixpkgs.overlays = [cosmicUnstableOverlay];
+        }
         ./home-manager/home.nix
       ];
       extraSpecialArgs = {
