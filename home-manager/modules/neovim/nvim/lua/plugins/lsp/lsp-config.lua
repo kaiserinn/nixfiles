@@ -20,6 +20,7 @@ return {
 			},
 			dartls = {},
 			tinymist = {},
+			wgsl_analyzer = {},
 			rust_analyzer = {
 				settings = {
 					["rust-analyzer"] = {
