@@ -38,6 +38,7 @@ in {
       pyright
       # unstable.svelte-language-server
       clang-tools
+      wgsl-analyzer
 
       # Formatters/linters
       alejandra
