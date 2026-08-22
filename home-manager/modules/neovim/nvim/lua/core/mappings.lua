@@ -1,8 +1,8 @@
 local map = function(mode, keys, func, desc)
   vim.keymap.set(mode, keys, func, {
-      noremap = true,
-      silent = true,
-      desc = "Core: " .. desc,
+    noremap = true,
+    silent = true,
+    desc = "Core: " .. desc,
   })
 end
 
@@ -61,6 +61,10 @@ map('n', '<leader>z', ':q<CR>', 'Close current window')
 map('n', '<leader>sv', ':vsplit<CR>', 'Split window vertically')
 map('n', '<leader>sh', ':split<CR>', 'Split window horizontally')
 
+-- Run commands
+map("n", "<leader>:", ":!", "Shell command")
+map("n", "<leader><cr>", ":!<up>", "Last shell command")
+
 -- Insert --
 -- Move around in insert mode
 map("i", "<C-k>", "<Up>", "Move up")
@@ -92,11 +96,11 @@ map("x", "<A-J>", ":m '>+1<CR>gv=gv", "Move line down.")
 map("x", "<A-K>", ":m '<-2<CR>gv=gv", "Move line up.")
 
 -- Delete & Yank extras
-map({"n", "v"}, "d", "\"_d", "Delete without yanking")
+map({ "n", "v" }, "d", "\"_d", "Delete without yanking")
 map("v", "p", "\"_dP", "Replace-paste without yanking")
 
 -- Save File
-map({"n", "s"}, "<C-s>", ":w<CR>", "Save current file")
+map({ "n", "s" }, "<C-s>", ":w<CR>", "Save current file")
 
 -- Select All
 map("n", "<C-A>", "ggVG", "Select all")
