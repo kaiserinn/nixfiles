@@ -61,9 +61,9 @@ map('n', '<leader>z', ':q<CR>', 'Close current window')
 map('n', '<leader>sv', ':vsplit<CR>', 'Split window vertically')
 map('n', '<leader>sh', ':split<CR>', 'Split window horizontally')
 
--- Run commands
-map("n", "<leader>:", ":!", "Shell command")
-map("n", "<leader><cr>", ":!<up>", "Last shell command")
+-- Shell command
+vim.keymap.set("n", "<leader>;", ":!", { desc = "Core: Shell command" })
+vim.keymap.set("n", "<leader><cr>", ":!<up>", { desc = "Core: Last shell command" })
 
 -- Insert --
 -- Move around in insert mode
