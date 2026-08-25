@@ -13,6 +13,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Change the color of stderr text from shell commands (:!)
+vim.api.nvim_set_hl(0, "StderrMsg", { fg = "#82c8e4" })
+
 -- require("lazy").setup("plugins")
 require("lazy").setup({
   { import = "plugins.lsp" },

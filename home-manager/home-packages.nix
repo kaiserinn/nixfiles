@@ -67,7 +67,7 @@ in {
     opencode
     # gopeed
     zed-editor
-    krita
+    kdePackages.okular
 
     # misc
     git
@@ -90,16 +90,16 @@ in {
     devenv
     ngrok
 
-    (pkgs.php.buildEnv {
-      extensions = {
-        enabled,
-        all,
-      }:
-        enabled ++ [all.xdebug];
-      extraConfig = ''
-        xdebug.mode=debug,coverage
-      '';
-    })
-    php84Packages.composer
+    # (pkgs.php.buildEnv {
+    #   extensions = {
+    #     enabled,
+    #     all,
+    #   }:
+    #     enabled ++ [all.xdebug];
+    #   extraConfig = ''
+    #     xdebug.mode=debug,coverage
+    #   '';
+    # })
+    # php84Packages.composer
   ];
 }
