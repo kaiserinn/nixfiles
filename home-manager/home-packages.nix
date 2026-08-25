@@ -67,7 +67,7 @@ in {
     opencode
     # gopeed
     zed-editor
-    kdePackages.okular
+    zathura
 
     # misc
     git
