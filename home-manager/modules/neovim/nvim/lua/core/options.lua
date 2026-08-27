@@ -3,7 +3,7 @@ vim.g.maplocalleader = " "
 
 local opt = vim.opt
 
-opt.laststatus = 3 -- global statusline
+opt.laststatus = 2 -- global statusline
 opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
@@ -68,3 +68,15 @@ opt.guicursor = "n-v-c-sm-i:block,ci-ve:ver25-Cursor,r-cr-o:hor20"
 
 -- borders for lsp hover, diagnostics, etc.
 vim.opt.winborder = "none"
+
+-- For term.run
+-- See https://github.com/neovim/neovim/discussions/38315
+vim.api.nvim_clear_autocmds({ group = 'nvim.terminal', event = 'TermClose' })
+
+if vim.g.neovide then
+  vim.g.neovide_opacity = 1
+  vim.g.neovide_normal_opacity = 0.8
+  vim.g.neovide_scroll_animation_length = 0.1
+  vim.g.neovide_cursor_animation_length = 0
+  vim.g.neovide_cursor_short_animation_length = 0
+end

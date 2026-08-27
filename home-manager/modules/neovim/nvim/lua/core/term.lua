@@ -23,7 +23,7 @@ function M.run(cmd, opts)
         row      = vim.o.lines - 1,
         col      = 0,
         style    = "minimal",
-        border   = "none",
+        border   = "single",
     }
     local win = vim.api.nvim_open_win(buf, true, win_opts)
 
@@ -49,6 +49,7 @@ function M.run(cmd, opts)
     vim.fn.jobstart(cmd, {
         term = true,
         on_stdout = auto_resize and resize_to_content or nil,
+        on_stderr = auto_resize and resize_to_content or nil,
         on_exit = function()
             vim.cmd("stopinsert")
             if auto_resize then
