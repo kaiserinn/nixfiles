@@ -1,5 +1,8 @@
+local palette = require('rose-pine.palette')
+
 return {
 	"nvim-lualine/lualine.nvim",
+	enabled = true,
 	opts = {
 		options = {
 			icons_enabled = false,
@@ -20,40 +23,64 @@ return {
 			},
 		},
 		sections = {
-			lualine_a = { "mode" },
-			lualine_b = {
-				-- "branch",
-				-- { "diff", padding = { left = 0, right = 1 } },
-			},
+			lualine_a = {},
+			lualine_b = {},
 			lualine_c = {
+				{
+					function()
+						return '▊'
+					end,
+					color = { fg = palette.iris },
+					padding = { left = 0, right = 1 },
+				},
+				{
+					'mode',
+					fmt = function(str)
+						local mode_map = {
+							['NORMAL'] = 'NOR',
+							['INSERT'] = 'INS',
+							['VISUAL'] = 'VIS',
+							['V-LINE'] = 'V-L',
+							['V-BLOCK'] = 'V-B',
+							['REPLACE'] = 'REP',
+							['COMMAND'] = 'CMD',
+							['SELECT'] = 'SEL',
+							['TERMINAL'] = 'TERM',
+							['EX'] = 'EX',
+						}
+						return mode_map[str] or str
+					end,
+					padding = { left = 1, right = 2 }
+				},
+				{
+					"filename",
+					path = 1,
+				},
+			},
+			lualine_x = {
 				{
 					"diagnostics",
 					symbols = {
-						error = " ",
-						warn = " ",
-						hint = " ",
-						info = " ",
+						error = "󰝥 ",
+						warn = "󰝥 ",
+						hint = "󰝥 ",
+						info = "󰝥 ",
 					},
 				},
-				-- { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-				"filename",
+				"location"
 			},
-			lualine_x = {},
-			lualine_y = {
-				"branch"
-				-- { "filetype", icon_only = true, separator = "" },
-			},
-			-- lualine_z = {},
-			-- lualine_z = {
-			-- 	function()
-			-- 		return " " .. os.date("%R")
-			-- 	end,
-			-- },
+			lualine_y = {},
+			lualine_z = {}
 		},
 		inactive_sections = {
 			lualine_a = {},
 			lualine_b = {},
-			lualine_c = { "filename" },
+			lualine_c = {
+				{
+					"filename",
+					path = 1,
+				},
+			},
 			lualine_x = { "location" },
 			lualine_y = {},
 			lualine_z = {},

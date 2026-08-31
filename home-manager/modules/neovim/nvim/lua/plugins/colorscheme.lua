@@ -67,6 +67,8 @@ return {
 			highlight_groups = {
 				FlashLabel = { bg = "transparent", fg = "gold" },
 				FlashCurrent = { bg = "gold", fg = "text", blend = 30 },
+				StatusLine = { fg = "subtle", bg = "surface" },
+				StatusLineNC = { fg = "subtle", bg = "surface" },
 			},
 			enable = {
 				terminal = false,
