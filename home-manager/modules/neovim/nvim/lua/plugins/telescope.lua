@@ -1,34 +1,3 @@
-local function get_foo(opts)
-    opts = opts or {}
-
-    local theme_opts = {
-        theme = "ivy",
-
-        sorting_strategy = "ascending",
-
-        layout_strategy = "bottom_pane",
-        layout_config = {
-            height = 25,
-        },
-
-        border = true,
-        borderchars = {
-            prompt = { "─", " ", " ", " ", "─", "─", " ", " " },
-            results = { " " },
-            preview = { " " },
-        },
-    }
-    if opts.layout_config and opts.layout_config.prompt_position == "bottom" then
-        theme_opts.borderchars = {
-            prompt = { " ", " ", "─", " ", " ", " ", "─", "─" },
-            results = { "─", " ", " ", " ", "─", "─", " ", " " },
-            preview = { " ", " ", " ", " ", " ", " ", " ", " " },
-        }
-    end
-
-    return vim.tbl_deep_extend("force", theme_opts, opts)
-end
-
 return { -- Fuzzy Finder (files, lsp, etc)
     "nvim-telescope/telescope.nvim",
     event = "VimEnter",
@@ -48,7 +17,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
                 return vim.fn.executable("make") == 1
             end,
         },
-        -- { "nvim-telescope/telescope-ui-select.nvim" },
+        { "nvim-telescope/telescope-ui-select.nvim" },
 
         -- Useful for getting pretty icons, but requires a Nerd Font.
         { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },

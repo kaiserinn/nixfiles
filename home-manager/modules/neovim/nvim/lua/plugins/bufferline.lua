@@ -3,8 +3,8 @@ return {
   version = "*",
   dependencies = 'nvim-tree/nvim-web-devicons',
   event = "VeryLazy",
-  enabled = true,
-  opts = function ()
+  enabled = false,
+  opts = function()
     return {
       options = {
         style_preset = require('bufferline').style_preset.minimal,
@@ -15,11 +15,11 @@ return {
         show_close_icon = false,
         always_show_bufferline = false,
         show_buffer_icons = false,
-        separator_style = {"", ""},
+        separator_style = { "", "" },
       }
     }
   end,
-  config = function (_, opts)
+  config = function(_, opts)
     require('bufferline').setup(opts)
 
     -- Fix bufferline when restoring a session
@@ -32,8 +32,8 @@ return {
       end,
     })
 
-    local map = function (key, func, desc)
-      vim.keymap.set('n', key, func, { silent = true, desc = 'Bufferline: ' .. desc } )
+    local map = function(key, func, desc)
+      vim.keymap.set('n', key, func, { silent = true, desc = 'Bufferline: ' .. desc })
     end
 
     map("<S-l>", "<CMD>BufferLineCycleNext<CR>", "Cycle next")

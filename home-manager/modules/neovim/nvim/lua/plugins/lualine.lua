@@ -1,4 +1,18 @@
-local palette = require('rose-pine.palette')
+local mode_map = {
+	['NORMAL']    = 'NOR',
+	['INSERT']    = 'INS',
+	['VISUAL']    = 'VIS',
+	['V-LINE']    = 'V-L',
+	['V-BLOCK']   = 'V-B',
+	['SELECT']    = 'SEL',
+	['S-LINE']    = 'S-L',
+	['S-BLOCK']   = 'S-B',
+	['REPLACE']   = 'REP',
+	['V-REPLACE'] = 'V-R',
+	['COMMAND']   = 'CMD',
+	['EX']        = 'EX',
+	['TERMINAL']  = 'TERM',
+}
 
 return {
 	"nvim-lualine/lualine.nvim",
@@ -30,24 +44,27 @@ return {
 					function()
 						return '▊'
 					end,
-					color = { fg = palette.iris },
+					color = function()
+						local suffix = require('lualine.highlight').get_mode_suffix()
+
+						if suffix == '_normal' then
+							local ok, palette = pcall(require, 'rose-pine.palette')
+							if ok and palette and palette.iris then
+								return { fg = palette.iris }
+							end
+						end
+
+						local hl = vim.api.nvim_get_hl(0, { name = 'lualine_a' .. suffix })
+						local color = hl.bg or hl.fg
+						if color then
+							return { fg = string.format('#%06x', color) }
+						end
+					end,
 					padding = { left = 0, right = 1 },
 				},
 				{
 					'mode',
 					fmt = function(str)
-						local mode_map = {
-							['NORMAL'] = 'NOR',
-							['INSERT'] = 'INS',
-							['VISUAL'] = 'VIS',
-							['V-LINE'] = 'V-L',
-							['V-BLOCK'] = 'V-B',
-							['REPLACE'] = 'REP',
-							['COMMAND'] = 'CMD',
-							['SELECT'] = 'SEL',
-							['TERMINAL'] = 'TERM',
-							['EX'] = 'EX',
-						}
 						return mode_map[str] or str
 					end,
 					padding = { left = 1, right = 2 }
