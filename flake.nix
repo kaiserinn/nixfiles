@@ -38,6 +38,10 @@
       url = "github:schembriaiden/helium-browser-nix-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    neovim-nightly = {
+      url ="github:nix-community/neovim-nightly-overlay";
+    };
   };
 
   outputs = {

@@ -2,6 +2,7 @@
   pkgs,
   config,
   unstable,
+  inputs,
   ...
 }: let
   homeDir = config.home.homeDirectory;
@@ -11,6 +12,7 @@ in {
 
   programs.neovim = {
     enable = true;
+    package = inputs.neovim-nightly.packages.${pkgs.stdenv.hostPlatform.system}.default;
     defaultEditor = true;
     sideloadInitLua = true;
     extraPackages = with pkgs; [
