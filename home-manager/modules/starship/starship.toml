@@ -17,6 +17,7 @@ format = "*[$branch(:$remote_branch)]($style) "
 style = "#606060"
 
 [username]
+disabled = true
 format = "[$user](#3e8fb0) "
 show_always = true
 # style_user = '#606060'

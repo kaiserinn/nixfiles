@@ -21,6 +21,7 @@ in {
       cargo
       # lua55Packages.tree-sitter-cli
       tree-sitter
+      gnumake
 
       # Language servers
       nixd
@@ -48,9 +49,10 @@ in {
       eslint_d
       rustfmt
       clippy
+      stylua
 
       # For typst-preview
-      websocat
+      # websocat
     ];
   };
 }
