@@ -42,6 +42,8 @@ function M.run(cmd, opts)
         local height = math.min(math.max(lines + 1, min_height), max_height)
         if height ~= win_opts.height then
             win_opts.height = height
+
+            -- TODO: Use nvim_win_resize() instead
             vim.api.nvim_win_set_config(win, win_opts)
         end
     end

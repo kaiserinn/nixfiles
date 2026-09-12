@@ -16,3 +16,9 @@ vim.api.nvim_create_user_command("Run", function(opts)
     if cmd == "" then return end
     term.run(cmd, { auto_resize = true })
 end, { nargs = "*", complete = "shellcmd" })
+
+vim.api.nvim_create_user_command("Runx", function(opts)
+    local cmd = opts.args
+    if cmd == "" then return end
+    term.run(cmd, { auto_resize = true, close_on_exit = true })
+end, { nargs = "*", complete = "shellcmd" })
