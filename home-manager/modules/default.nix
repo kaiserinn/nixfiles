@@ -18,5 +18,6 @@
     # ./walker.nix
     # ./obsidian.nix
     ./services.nix
+    ./fcitx.nix
   ];
 }
