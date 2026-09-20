@@ -23,7 +23,7 @@ function M.run(cmd, opts)
         row      = vim.o.lines - 1,
         col      = 0,
         style    = "minimal",
-        border   = "single",
+        border   = { "─", "─", "─", " ", " ", " ", " ", " " },
     }
     local win = vim.api.nvim_open_win(buf, true, win_opts)
 
