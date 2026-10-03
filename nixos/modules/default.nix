@@ -12,5 +12,6 @@
     ./nix.nix
     # ./gnome.nix
     ./cosmic.nix
+    ./niri.nix
   ];
 }
