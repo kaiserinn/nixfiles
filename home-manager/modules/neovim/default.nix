@@ -42,6 +42,7 @@ in {
       # unstable.svelte-language-server
       clang-tools
       wgsl-analyzer
+      kdePackages.qtdeclarative # qmlls, etc.
 
       # Formatters/linters
       alejandra

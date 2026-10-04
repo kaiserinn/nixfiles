@@ -29,11 +29,6 @@
       inputs.elephant.follows = "elephant";
     };
 
-    # waybar = {
-    #   url = "github:Alexays/Waybar";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
     helium = {
       url = "github:schembriaiden/helium-browser-nix-flake";
       inputs.nixpkgs.follows = "nixpkgs";

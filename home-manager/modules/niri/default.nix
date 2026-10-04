@@ -1,4 +1,8 @@
-{pkgs, config, ...}: let
+{
+  pkgs,
+  config,
+  ...
+}: let
   homeDir = config.home.homeDirectory;
   niriConfig = "${homeDir}/.config/nix/home-manager/modules/niri";
 in {
@@ -16,6 +20,7 @@ in {
   services.awww.enable = true;
 
   imports = [
-    ../ironbar
+    # ../ironbar
+    ../quickshell
   ];
 }
