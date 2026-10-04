@@ -2,11 +2,11 @@
   imports = [
     ./terminal
     ./neovim
-    ./hypr
+    # ./hypr
     ./kitty
     ./dunst
     ./rofi
-    ./waybar
+    # ./waybar
     ./yazi
     ./zellij
     ./starship

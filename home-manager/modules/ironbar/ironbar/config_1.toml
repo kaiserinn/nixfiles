@@ -1,0 +1,24 @@
+position = "top"
+height = 20
+
+[[start]]
+type = "workspaces"
+icon_size = 14
+sort = "index"
+all_monitors = false
+
+[[center]]
+type = "clock"
+format = "%a %d %b %I:%M %P"
+format_popup = "%I:%M:%S %P"
+
+[[end]]
+type = "battery"
+format = "{percentage}%"
+icon_size = 14
+show_icon = true
+show_label = true
+
+[[end]]
+type = "volume"
+format = "{icon} {percentage}%"

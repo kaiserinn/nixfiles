@@ -1,0 +1,55 @@
+/* Basic compact styling - smallest readable height (~20px) */
+* {
+    font-size: 12px;
+    font-family: monospace;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+#bar {
+    background-color: #1c1c1c;
+}
+
+/* Remove GTK default vertical padding that forces a tall bar */
+#bar, #bar box, #bar button, #bar label, #bar image {
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#bar button {
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: transparent;
+    color: #fff;
+}
+
+#bar button:hover {
+    background-color: #2d2d2d;
+}
+
+/* Spacing between sections */
+#end > * + * {
+    margin-left: 0.5em;
+}
+
+/* Module emphasis */
+.clock {
+    font-weight: bold;
+}
+
+.workspaces .item.focused {
+    background-color: #2d2d2d;
+    box-shadow: inset 0 -1px #6699cc;
+}
+
+.workspaces .item.visible {
+    box-shadow: inset 0 -1px #fff;
+}
+
+.workspaces .item.urgent {
+    background-color: #8f0a0a;
+}
