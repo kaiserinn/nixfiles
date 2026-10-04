@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  unstable,
   ...
 }: let
   system = pkgs.stdenv.hostPlatform.system;
@@ -64,10 +65,11 @@ in {
     obsidian
     anki
     zotero
-    opencode
+    unstable.opencode
     # gopeed
     zed-editor
-    zathura
+    zathura # PDF
+    nsxiv # image viewer
 
     # misc
     git
