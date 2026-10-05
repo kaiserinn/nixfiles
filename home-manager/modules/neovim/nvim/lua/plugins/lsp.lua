@@ -21,6 +21,7 @@ return {
 			},
 			dartls = {},
 			tinymist = {},
+			qmlls = {},
 			wgsl_analyzer = {},
 			rust_analyzer = {
 				settings = {
