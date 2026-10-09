@@ -20,5 +20,6 @@
     # ./obsidian.nix
     ./services.nix
     ./fcitx.nix
+    # ./qt.nix
   ];
 }

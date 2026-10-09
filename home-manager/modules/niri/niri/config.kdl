@@ -67,7 +67,7 @@ input {
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    focus-follows-mouse
+    // focus-follows-mouse
 }
 
 // You can configure outputs by their name, which you can find
@@ -115,6 +115,7 @@ output "eDP-1" {
 }
 
 output "eDP-2" { 
+    off
     mode "1920x1080@60.004"
     scale 1
     transform "normal"
@@ -189,7 +190,9 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#7fc8ff"
+        // active-color "#7fc8ff" // default
+        // active-color "#c94a5b" // red
+        active-color "#FCE8C3" // white
 
         // Color of the ring on inactive monitors.
         //
