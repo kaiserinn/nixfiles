@@ -11,7 +11,7 @@
     ./hyprland.nix
     ./nix.nix
     # ./gnome.nix
-    ./cosmic.nix
+    # ./cosmic.nix
     ./niri.nix
   ];
 }
