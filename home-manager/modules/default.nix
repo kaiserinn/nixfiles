@@ -11,6 +11,7 @@
     ./zellij
     ./starship
     ./niri
+    ./anyrun
     ./git.nix
     ./jujutsu.nix
     # ./cursor.nix
