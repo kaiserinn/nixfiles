@@ -13,7 +13,6 @@ in {
     xwayland-satellite
 
     wireplumber
-    ironbar
   ];
 
   # Wallpaper
@@ -22,5 +21,6 @@ in {
   imports = [
     # ../ironbar
     ../quickshell
+    ../rofi
   ];
 }

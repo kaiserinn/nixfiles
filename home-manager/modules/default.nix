@@ -5,7 +5,7 @@
     # ./hypr
     ./kitty
     ./dunst
-    ./rofi
+    # ./rofi
     # ./waybar
     ./yazi
     ./zellij
@@ -22,5 +22,6 @@
     ./services.nix
     ./fcitx.nix
     # ./qt.nix
+    ./mime.nix
   ];
 }
