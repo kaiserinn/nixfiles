@@ -107,13 +107,6 @@ input {
     position x=1280 y=0
 }
 
-output "eDP-1" { 
-    mode "1920x1080@60.004"
-    scale 1
-    transform "normal"
-    position x=0 y=0
-}
-
 output "eDP-2" { 
     off
     mode "1920x1080@60.004"
@@ -398,7 +391,8 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Return { spawn-sh "kitten quick-access-terminal"; }
-    Alt+Space hotkey-overlay-title="Run an Application: walker" { spawn-sh "nc -U /run/user/1000/walker/walker.sock"; }
+    // Alt+Space hotkey-overlay-title="Run an Application: walker" { spawn-sh "nc -U /run/user/1000/walker/walker.sock"; }
+    Alt+Space hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.

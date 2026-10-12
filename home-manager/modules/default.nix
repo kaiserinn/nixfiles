@@ -11,7 +11,6 @@
     ./zellij
     ./starship
     ./niri
-    ./anyrun
     ./git.nix
     ./jujutsu.nix
     # ./cursor.nix
@@ -23,5 +22,6 @@
     ./fcitx.nix
     # ./qt.nix
     ./mime.nix
+    ./desktop-app.nix
   ];
 }

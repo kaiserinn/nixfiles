@@ -19,8 +19,8 @@ in {
   services.awww.enable = true;
 
   imports = [
-    # ../ironbar
     ../quickshell
     ../rofi
+    # ../anyrun
   ];
 }

@@ -8,7 +8,7 @@
     ./tlp.nix
     # ./docker.nix
     # ./steam.nix
-    ./hyprland.nix
+    # ./hyprland.nix
     ./nix.nix
     # ./gnome.nix
     # ./cosmic.nix
