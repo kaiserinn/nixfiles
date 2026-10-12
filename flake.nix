@@ -35,7 +35,12 @@
     };
 
     neovim-nightly = {
-      url ="github:nix-community/neovim-nightly-overlay";
+      url = "github:nix-community/neovim-nightly-overlay";
+    };
+
+    hytale-launcher = {
+      url = "github:visoredkon/hytale-launcher-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -88,6 +93,13 @@
       inherit pkgs;
       modules = [
         ./home-manager/home.nix
+        {
+          nixpkgs = {
+            overlays = [inputs.hytale-launcher.overlays.default];
+            config.allowUnfreePredicate = pkg:
+              builtins.elem (nixpkgs.lib.getName pkg) ["hytale-launcher"];
+          };
+        }
       ];
       extraSpecialArgs = {
         inherit inputs;

@@ -260,6 +260,26 @@
         "type": "github"
       }
     },
+    "hytale-launcher": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791870731,
+        "narHash": "sha256-KC/6smFgnWtdFWfpCToWA6PPdRxMsoyJ1NwxF3Ge92A=",
+        "owner": "visoredkon",
+        "repo": "hytale-launcher-flake",
+        "rev": "8865af0200edf7d15d2c217a30f139132c097962",
+        "type": "github"
+      },
+      "original": {
+        "owner": "visoredkon",
+        "repo": "hytale-launcher-flake",
+        "type": "github"
+      }
+    },
     "kintsugi": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -469,6 +489,7 @@
         "elephant": "elephant",
         "helium": "helium",
         "home-manager": "home-manager",
+        "hytale-launcher": "hytale-launcher",
         "kintsugi": "kintsugi",
         "neovim-nightly": "neovim-nightly",
         "nixpkgs": "nixpkgs_4",

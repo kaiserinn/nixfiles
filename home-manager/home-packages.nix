@@ -81,6 +81,7 @@ in {
 
     inputs.kintsugi.packages.${system}.default
     inputs.helium.packages.${system}.default
+    hytale-launcher
 
     # dev
     bun
