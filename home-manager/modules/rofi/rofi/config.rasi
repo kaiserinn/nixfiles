@@ -1,4 +1,4 @@
-configuration{
+configuration {
     modi: "run,drun,window,filebrowser,keys";
     icon-theme: "Qogir-dark";
     show-icons: false;
@@ -7,7 +7,7 @@ configuration{
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    sidebar-mode: false;
+    sidebar-mode: true;
 }
 
-@theme "/home/azhar/.config/rofi/themes/spotlight-dark.rasi"
+// @theme "/home/azhar/.config/rofi/themes/spotlight-dark.rasi"

@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: let
+{config, ...}: let
   homeDir = config.home.homeDirectory;
   quickshellConfig = "${homeDir}/.config/nix/home-manager/modules/quickshell";
 in {
