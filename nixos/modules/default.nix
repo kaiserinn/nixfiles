@@ -13,5 +13,6 @@
     # ./gnome.nix
     # ./cosmic.nix
     ./niri.nix
+    ./tailscale.nix
   ];
 }
