@@ -4,6 +4,7 @@
     config = {
       plugins = [
         "${pkgs.anyrun}/lib/libapplications.so"
+        "${pkgs.anyrun}/lib/libwebsearch.so"
       ];
     };
   };

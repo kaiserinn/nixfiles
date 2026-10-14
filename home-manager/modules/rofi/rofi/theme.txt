@@ -1,0 +1,8 @@
+font: "monospace"
+primary: "#c94a5b"
+background: "#121110"
+text: "#FCE8C3"
+textMuted: "#C5B088"
+danger: "#c94a5b"
+disabled: "#6c7086"
+track: "#3a3a3a"
