@@ -299,6 +299,28 @@
         "type": "github"
       }
     },
+    "nbfc-linux": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "pkgbuilds/nix",
+        "lastModified": 1792090159,
+        "narHash": "sha256-+oRGEWYbmFDZ5l0wmmW4rmE7YIxvt1smgQh6ke4OOSs=",
+        "owner": "nbfc-linux",
+        "repo": "nbfc-linux",
+        "rev": "bbfa54fd67b7cebaafe28b9d2e64f1d1fe0e87bc",
+        "type": "github"
+      },
+      "original": {
+        "dir": "pkgbuilds/nix",
+        "owner": "nbfc-linux",
+        "repo": "nbfc-linux",
+        "type": "github"
+      }
+    },
     "neovim-nightly": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -429,6 +451,22 @@
     },
     "nixpkgs_5": {
       "locked": {
+        "lastModified": 1792502884,
+        "narHash": "sha256-IoNisKcGbUjdd45qCqywGMCYmZ5EnkxezvLII0FWwNA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "02c087f3fe673c9e317f206a627cb6b910336dbe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_6": {
+      "locked": {
         "lastModified": 1775710090,
         "narHash": "sha256-ar3rofg+awPB8QXDaFJhJ2jJhu+KqN/PRCXeyuXR76E=",
         "owner": "NixOS",
@@ -443,7 +481,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_7": {
       "locked": {
         "lastModified": 1786599213,
         "narHash": "sha256-yNJd40f11EzXBjSByCB7IPpeFFAdeoSKKM67dGkfFoU=",
@@ -491,12 +529,29 @@
         "home-manager": "home-manager",
         "hytale-launcher": "hytale-launcher",
         "kintsugi": "kintsugi",
+        "nbfc-linux": "nbfc-linux",
         "neovim-nightly": "neovim-nightly",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-unstable": "nixpkgs-unstable",
+        "sleip": "sleip",
         "stylix": "stylix",
         "walker": "walker",
         "zen-browser": "zen-browser"
+      }
+    },
+    "sleip": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5"
+      },
+      "locked": {
+        "lastModified": 1793339637,
+        "narHash": "sha256-5wNZ5QmEjM4sbE7+Ar4wfLxwxvihzzNPPZynGcsurn4=",
+        "path": "/home/azhar/dev/sleip",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/azhar/dev/sleip",
+        "type": "path"
       }
     },
     "stylix": {
@@ -695,7 +750,7 @@
         "elephant": [
           "elephant"
         ],
-        "nixpkgs": "nixpkgs_5",
+        "nixpkgs": "nixpkgs_6",
         "systems": "systems_5"
       },
       "locked": {
@@ -715,7 +770,7 @@
     "zen-browser": {
       "inputs": {
         "home-manager": "home-manager_2",
-        "nixpkgs": "nixpkgs_6"
+        "nixpkgs": "nixpkgs_7"
       },
       "locked": {
         "lastModified": 1786883935,

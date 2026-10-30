@@ -7,12 +7,13 @@
     ./services.nix
     ./tlp.nix
     # ./docker.nix
-    # ./steam.nix
-    # ./hyprland.nix
+    ./steam.nix
+    ./hyprland.nix
     ./nix.nix
     # ./gnome.nix
     # ./cosmic.nix
     ./niri.nix
     ./tailscale.nix
+    ./nbfc.nix
   ];
 }

@@ -9,6 +9,7 @@
     };
 
     kintsugi.url = "github:kaiserinn/kintsugi";
+    sleip.url = "path:/home/azhar/dev/sleip";
 
     stylix = {
       url = "github:nix-community/stylix/release-26.05";
@@ -40,6 +41,11 @@
 
     hytale-launcher = {
       url = "github:visoredkon/hytale-launcher-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nbfc-linux = {
+      url = "github:nbfc-linux/nbfc-linux?dir=pkgbuilds/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -80,7 +86,10 @@
   in {
     nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = {inherit inputs;};
+      specialArgs = {
+        inherit inputs;
+        inherit unstable;
+      };
       modules = [
         {
           nixpkgs.overlays = [cosmicUnstableOverlay];

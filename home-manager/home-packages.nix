@@ -70,6 +70,7 @@ in {
     zed-editor
     zathura # PDF
     nsxiv # image viewer
+    easyeffects
 
     # misc
     git
@@ -80,6 +81,7 @@ in {
     man-pages
 
     inputs.kintsugi.packages.${system}.default
+    inputs.sleip.packages.${system}.default
     inputs.helium.packages.${system}.default
     hytale-launcher
 

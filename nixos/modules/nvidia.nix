@@ -2,6 +2,7 @@
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
   };
 
   # https://wiki.hypr.land/Nvidia/#environment-variables 

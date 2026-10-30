@@ -23,5 +23,6 @@
     # ./qt.nix
     ./mime.nix
     ./desktop-app.nix
+    ./lutris.nix
   ];
 }
