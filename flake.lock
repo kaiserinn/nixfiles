@@ -544,8 +544,8 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1793339637,
-        "narHash": "sha256-5wNZ5QmEjM4sbE7+Ar4wfLxwxvihzzNPPZynGcsurn4=",
+        "lastModified": 1793407286,
+        "narHash": "sha256-uImW9J6rF6DFC2ElQMPS++YB92kekut2ATB4+1Tk/gc=",
         "path": "/home/azhar/dev/sleip",
         "type": "path"
       },
