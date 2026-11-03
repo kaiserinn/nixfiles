@@ -1,9 +1,9 @@
 local map = function(mode, keys, func, desc)
-  vim.keymap.set(mode, keys, func, {
-    noremap = true,
-    silent = true,
-    desc = "Core: " .. desc,
-  })
+    vim.keymap.set(mode, keys, func, {
+        noremap = true,
+        silent = true,
+        desc = "Core: " .. desc,
+    })
 end
 
 -- Modes
@@ -41,24 +41,31 @@ vim.keymap.set("n", "<A-J>", ":m .+1<CR>==", { desc = "Move line down." })
 vim.keymap.set("n", "<A-K>", ":m .-2<CR>==", { desc = "Move line down." })
 
 -- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- LSPs
-map("n", "<S-k>", function() vim.lsp.buf.hover({ border = "rounded" }) end, "")
-map('n', '<space>f', vim.diagnostic.open_float, "Open diagnostic.")
+map("n", "<S-k>", function()
+    vim.lsp.buf.hover({ border = "rounded" })
+end, "")
+map("n", "<space>f", vim.diagnostic.open_float, "Open diagnostic.")
 -- nmap('n', '[d', vim.diagnostic.goto_prev, "Go to previous diagnostic")
 -- nmap('n', ']d', vim.diagnostic.goto_next, "Go to next diagnostic")
 -- nmap('n', '<space>q', vim.diagnostic.setloclist)
 
 -- Misc
-map('n', '<Esc>', ':noh <CR>', 'Clear highlights')
-map('n', '<C-j>', '5j', 'Move 5 lines down')
-map('n', '<C-k>', '5k', 'Move 5 lines up')
+map("n", "<Esc>", ":noh <CR>", "Clear highlights")
+map("n", "<C-j>", "5j", "Move 5 lines down")
+map("n", "<C-k>", "5k", "Move 5 lines up")
 
-map('n', '<leader>z', ':q<CR>', 'Close current window')
-map('n', '<leader>sv', ':vsplit<CR>', 'Split window vertically')
-map('n', '<leader>sh', ':split<CR>', 'Split window horizontally')
+map("n", "<leader>z", ":q<CR>", "Close current window")
+map("n", "<leader>sv", ":vsplit<CR>", "Split window vertically")
+map("n", "<leader>sh", ":split<CR>", "Split window horizontally")
+
+-- jjui
+map("n", "<leader>jj", function()
+    require("term").run("jjui", { fullscreen = true, close_on_exit = true })
+end, "Open jjui")
 
 -- Shell command
 vim.keymap.set("n", "<leader>;", ":Run ", { desc = "Core: Shell command" })
@@ -76,8 +83,8 @@ map("i", "<C-h>", "<Left>", "Move left")
 map("v", "<", "<gv^", "Shift the selected text left, then reselect the visual block.")
 map("v", ">", ">gv^", "Shift the selected text right, then reselect the visual block.")
 
-map("v", '<C-j>', '5j', 'Move 5 lines down')
-map("v", '<C-k>', '5k', 'Move 5 lines up')
+map("v", "<C-j>", "5j", "Move 5 lines down")
+map("v", "<C-k>", "5k", "Move 5 lines up")
 
 -- Move text up and down
 map("v", "<A-J>", ":m '>+1<CR>gv=gv", "Move line down.")
@@ -85,7 +92,6 @@ map("v", "<A-K>", ":m '<-2<CR>gv=gv", "Move line up.")
 
 vim.keymap.set("n", "<A-J>", ":m '>+1<CR>gv=gv", { desc = "Move line down." })
 vim.keymap.set("n", "<A-K>", ":m '<-2<CR>gv=gv", { desc = "Move line down." })
-
 
 map("v", "p", '"_dP', "Paste the yanked text, replacing the selected text.")
 
@@ -95,8 +101,8 @@ map("x", "<A-J>", ":m '>+1<CR>gv=gv", "Move line down.")
 map("x", "<A-K>", ":m '<-2<CR>gv=gv", "Move line up.")
 
 -- Delete & Yank extras
-map({ "n", "v" }, "d", "\"_d", "Delete without yanking")
-map("v", "p", "\"_dP", "Replace-paste without yanking")
+map({ "n", "v" }, "d", '"_d', "Delete without yanking")
+map("v", "p", '"_dP', "Replace-paste without yanking")
 
 -- Save File
 map({ "n", "s" }, "<C-s>", ":w<CR>", "Save current file")
@@ -106,4 +112,3 @@ map("n", "<C-A>", "ggVG", "Select all")
 
 -- Terminal --
 map("t", "<Esc><Esc>", [[<C-\><C-n>]], "Exit terminal mode")
-

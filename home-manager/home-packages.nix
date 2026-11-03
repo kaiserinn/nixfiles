@@ -67,7 +67,6 @@ in {
     zotero
     unstable.opencode
     # gopeed
-    zed-editor
     zathura # PDF
     nsxiv # image viewer
     easyeffects
