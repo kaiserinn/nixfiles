@@ -45,6 +45,7 @@ in {
     dua
     bottom
     moor
+    appimage-run
 
     # desktop environment
     dunst
@@ -81,6 +82,7 @@ in {
 
     inputs.kintsugi.packages.${system}.default
     inputs.sleip.packages.${system}.default
+    inputs.tomat.packages.${system}.default
     inputs.helium.packages.${system}.default
     hytale-launcher
 

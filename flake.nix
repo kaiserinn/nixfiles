@@ -10,6 +10,7 @@
 
     kintsugi.url = "github:kaiserinn/kintsugi";
     sleip.url = "path:/home/azhar/dev/sleip";
+    tomat.url = "github:kaiserinn/tomat/temp";
 
     stylix = {
       url = "github:nix-community/stylix/release-26.05";
