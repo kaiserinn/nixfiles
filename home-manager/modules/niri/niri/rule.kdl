@@ -1,3 +1,5 @@
+// niri msg pick-window
+
 window-rule {
     match app-id="zen-beta"
     open-on-workspace "主"
@@ -15,6 +17,11 @@ window-rule {
     match app-id="discord"
     open-maximized true
     open-on-workspace "火"
+}
+
+window-rule {
+    match app-id="vlc"
+    open-maximized true
 }
 
 // Window rules let you adjust behavior for individual windows.

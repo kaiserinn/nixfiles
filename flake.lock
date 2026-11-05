@@ -163,6 +163,19 @@
         "type": "github"
       }
     },
+    "fonts": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786365732,
+        "narHash": "sha256-AibacMlcN2w9Ro+p4Nn+jQkkMelSVj9JtcNogtRvKf0=",
+        "path": "/home/azhar/dev/tomat/assets/fonts",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/azhar/dev/tomat/assets/fonts",
+        "type": "path"
+      }
+    },
     "fromYaml": {
       "flake": false,
       "locked": {
@@ -467,6 +480,20 @@
     },
     "nixpkgs_6": {
       "locked": {
+        "lastModified": 1783389287,
+        "narHash": "sha256-R5cxRkQCq5wIM91F9OkIEgu8YoSGjlMeTjYl9o4gpKw=",
+        "rev": "0ad6f47ea4fe188f4bc8f0380f93ae8523337c6c",
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.4364.0ad6f47ea4fe/nixexprs.tar.xz"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-26.05",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_7": {
+      "locked": {
         "lastModified": 1775710090,
         "narHash": "sha256-ar3rofg+awPB8QXDaFJhJ2jJhu+KqN/PRCXeyuXR76E=",
         "owner": "NixOS",
@@ -481,7 +508,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_7": {
+    "nixpkgs_8": {
       "locked": {
         "lastModified": 1786599213,
         "narHash": "sha256-yNJd40f11EzXBjSByCB7IPpeFFAdeoSKKM67dGkfFoU=",
@@ -535,6 +562,7 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "sleip": "sleip",
         "stylix": "stylix",
+        "tomat": "tomat",
         "walker": "walker",
         "zen-browser": "zen-browser"
       }
@@ -727,6 +755,26 @@
         "type": "github"
       }
     },
+    "tomat": {
+      "inputs": {
+        "fonts": "fonts",
+        "nixpkgs": "nixpkgs_6"
+      },
+      "locked": {
+        "lastModified": 1793780940,
+        "narHash": "sha256-6lxun99x7hBZlrL8sJR81ipq+Bouok+pfuM8w0CnNxY=",
+        "owner": "kaiserinn",
+        "repo": "tomat",
+        "rev": "98237567b8f7659a420c28d5eff371403f3e6b67",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kaiserinn",
+        "ref": "temp",
+        "repo": "tomat",
+        "type": "github"
+      }
+    },
     "utils": {
       "inputs": {
         "systems": "systems_2"
@@ -750,7 +798,7 @@
         "elephant": [
           "elephant"
         ],
-        "nixpkgs": "nixpkgs_6",
+        "nixpkgs": "nixpkgs_7",
         "systems": "systems_5"
       },
       "locked": {
@@ -770,7 +818,7 @@
     "zen-browser": {
       "inputs": {
         "home-manager": "home-manager_2",
-        "nixpkgs": "nixpkgs_7"
+        "nixpkgs": "nixpkgs_8"
       },
       "locked": {
         "lastModified": 1786883935,
