@@ -761,11 +761,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1793780940,
-        "narHash": "sha256-6lxun99x7hBZlrL8sJR81ipq+Bouok+pfuM8w0CnNxY=",
+        "lastModified": 1793116800,
+        "narHash": "sha256-WC0ICaGnufQchAM1Q0oP8EZdNKhQriffRdn+e2ucjm4=",
         "owner": "kaiserinn",
         "repo": "tomat",
-        "rev": "98237567b8f7659a420c28d5eff371403f3e6b67",
+        "rev": "78025a7c738f564c34939d021bcb844326813bd8",
         "type": "github"
       },
       "original": {
