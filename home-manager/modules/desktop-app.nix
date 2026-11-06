@@ -1,5 +1,11 @@
 {
   xdg.desktopEntries = {
+    tomat = {
+      name = "Tomat";
+      type = "Application";
+      exec = "tomat";
+    };
+
     hytale-launcher-nvidia = {
       name = "Hytale Launcher (NVIDIA)";
       comment = "Official launcher for Hytale";
