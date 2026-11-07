@@ -21,6 +21,5 @@ in {
   imports = [
     ../quickshell
     ../rofi
-    # ../anyrun
   ];
 }
