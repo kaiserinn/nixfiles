@@ -24,6 +24,8 @@ opt.smartindent = true
 opt.tabstop = 4
 opt.softtabstop = 2
 
+opt.linebreak = true
+
 opt.fillchars = { eob = " " }
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term

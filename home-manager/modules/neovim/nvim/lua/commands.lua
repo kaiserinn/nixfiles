@@ -28,8 +28,8 @@ vim.api.nvim_create_user_command("Runx", function(opts)
 end, { nargs = "*", complete = "shellcmd" })
 
 vim.api.nvim_create_user_command("InsertDate", function()
-    local date = os.date("%d/%m/%Y") --[[@as string]]
+    local date = os.date("%Y-%m-%d") --[[@as string]]
     vim.api.nvim_put({ date }, "c", true, true)
 end, {
-    desc = "Insert current date in dd/mm/yyyy format",
+    desc = "Insert current date in yyyy/mm/dd format",
 })
